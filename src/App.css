@@ -1,3 +1,11 @@
+div {
+  color: red;
+}
+
+p {
+  text-align: right;
+}
+
 .App {
   text-align: center;
 }

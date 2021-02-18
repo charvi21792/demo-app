@@ -1,9 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import Name from './Name';
+
+export const App2 = (props) => {
   return (
-    <div className="App">
+    <div>
+      <Name age={45} />
+    </div>
+  );
+}
+export const App3 = (props) => {
+  return (<div><Name /></div>);
+}
+export const App4 = (props) => {
+  return (<div><Name /></div>);
+}
+
+function App(props) {
+  return (
+    <div className="App" id="container-div">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
