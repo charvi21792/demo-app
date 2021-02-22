@@ -1,20 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Name from './Name';
+import DefaultComponent from './Name';
+import { Country } from "./Country";
 
 export const App2 = (props) => {
   return (
     <div>
-      <Name age={45} />
+      <DefaultComponent age={45} />
     </div>
   );
 }
 export const App3 = (props) => {
-  return (<div><Name /></div>);
+  return (<div><DefaultComponent /></div>);
 }
 export const App4 = (props) => {
-  return (<div><Name /></div>);
+  return (<div><Country /></div>);
 }
 
 function App(props) {

@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App, { App2, App3, App4 } from './App';
+import { App2, App4 } from './App';
 // no braces - default export
 // specific exports - curly braces {}
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    <App2 />,//what
+    <App4 />,//what
   document.getElementById('react-mounting-element')//where
 );
 
@@ -15,3 +15,18 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+/*
+
+const obj = {
+  ..
+  ..
+  ..
+
+}
+
+export const some = obj.somepropety;
+
+export default obj;
+*/

@@ -9,6 +9,16 @@ class Name extends React.Component {
         };
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if(this.props.age !== nextProps.age) {
+            return true
+        }
+        if(this.state.name !== nextState.name) { //name value in state has changed
+            return true;
+        }
+        return false;
+    }
+
     render() {
         let { name } = this.state;
         let { age } = this.props;

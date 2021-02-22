@@ -2,8 +2,16 @@ div {
   color: red;
 }
 
-p {
+p.App {
   text-align: right;
+}
+
+p + span {
+  color:#61dafb;
+}
+
+#container-div {
+  color: blue;
 }
 
 .App {
