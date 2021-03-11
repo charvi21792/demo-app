@@ -30,11 +30,15 @@ export class Country extends Component {
         }));
     }
 
+    onOptionSelection() {
+
+    }
+
     render() {
         let { countryList, selectedCountryList, selectedCountry } = this.state;
         return (<div>
             <select onChange={(element) => this.onSelect(element)} value={selectedCountry}>
-                {countryList.map((country, index) => (<option onClick={(e) => onOptionSelection(country)} key={index}>{country}</option>))}
+                {countryList.map((country, index) => (<option onClick={(e) => this.onOptionSelection(country)} key={index}>{country}</option>))}
             </select>
             <ul>
                 {selectedCountryList.map((country, i) => (<li key={i}>{country}</li>))}

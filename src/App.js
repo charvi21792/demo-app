@@ -2,12 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 import DefaultComponent from './Name';
+import TodoApp from './Todo';
+import EventEx from './eventPropogation';
 import { Country } from "./Country";
 
 export const App2 = (props) => {
   return (
     <div>
-      <DefaultComponent age={45} />
+      <EventEx viewLink={true} value2="something else" />
     </div>
   );
 }
@@ -16,6 +18,9 @@ export const App3 = (props) => {
 }
 export const App4 = (props) => {
   return (<div><Country /></div>);
+}
+export const App5 = (props) => {
+  return <TodoApp />
 }
 
 function App(props) {
