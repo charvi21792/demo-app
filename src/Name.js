@@ -4,6 +4,7 @@ class Name extends React.Component {
 
     constructor(props) {
         super(props);
+        console.log(props);
         this.state = {
             name: "some content",
             todoList: [],

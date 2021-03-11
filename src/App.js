@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import {createBrowserHistory} from 'history';
 import DefaultComponent from './Name';
 import TodoApp from './Todo';
 import EventEx from './eventPropogation';
@@ -45,3 +46,26 @@ function App(props) {
 }
 
 export default App;
+
+export const RoutingApp = (props) => {
+  let history = createBrowserHistory();
+  return (
+    <Router history={history}>
+
+      <div>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/todo">Todo</Link></li>
+          <li><Link to="/country">Country</Link></li>
+          <li><Link to="/country/name">Name</Link></li>
+          <li><Link to="/events">Events</Link></li>
+        </ul>
+      </div>
+      <Route exact path="/" component={App} />
+      <Route path="/todo" component={TodoApp} />
+      <Route exact path="/country" component={Country} />
+      <Route path="/country/:id" component={DefaultComponent} />
+      <Route path="/events" component={EventEx} />
+    </Router>
+  );
+}
